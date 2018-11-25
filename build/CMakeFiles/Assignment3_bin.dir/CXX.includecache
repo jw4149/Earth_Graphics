@@ -1052,7 +1052,7 @@ GL/glext.h
 GL/glu.h
 -
 
-/Users/jiayang/Desktop/Assignment_3/src/Helpers.h
+/Users/jiayang/Desktop/CG_Project/src/Helpers.h
 string
 -
 vector
@@ -1070,11 +1070,11 @@ windows.h
 GL/gl.h
 -
 
-/Users/jiayang/Desktop/Assignment_3/src/main.cpp
+/Users/jiayang/Desktop/CG_Project/src/main.cpp
 Helpers.h
-/Users/jiayang/Desktop/Assignment_3/src/Helpers.h
+/Users/jiayang/Desktop/CG_Project/src/Helpers.h
 stb_image.h
-/Users/jiayang/Desktop/Assignment_3/src/stb_image.h
+/Users/jiayang/Desktop/CG_Project/src/stb_image.h
 GLFW/glfw3.h
 -
 Eigen/Core
@@ -1086,9 +1086,9 @@ iostream
 chrono
 -
 
-/Users/jiayang/Desktop/Assignment_3/src/stb_image.h
+/Users/jiayang/Desktop/CG_Project/src/stb_image.h
 stb_image.h
-/Users/jiayang/Desktop/Assignment_3/src/stb_image.h
+/Users/jiayang/Desktop/CG_Project/src/stb_image.h
 stdio.h
 -
 stdarg.h

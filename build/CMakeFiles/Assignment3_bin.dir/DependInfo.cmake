@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/jiayang/Desktop/Assignment_3/src/Helpers.cpp" "/Users/jiayang/Desktop/Assignment_3/build/CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.o"
-  "/Users/jiayang/Desktop/Assignment_3/src/main.cpp" "/Users/jiayang/Desktop/Assignment_3/build/CMakeFiles/Assignment3_bin.dir/src/main.cpp.o"
-  "/Users/jiayang/Desktop/Assignment_3/src/stb_image.cpp" "/Users/jiayang/Desktop/Assignment_3/build/CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.o"
+  "/Users/jiayang/Desktop/CG_Project/src/Helpers.cpp" "/Users/jiayang/Desktop/CG_Project/build/CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.o"
+  "/Users/jiayang/Desktop/CG_Project/src/main.cpp" "/Users/jiayang/Desktop/CG_Project/build/CMakeFiles/Assignment3_bin.dir/src/main.cpp.o"
+  "/Users/jiayang/Desktop/CG_Project/src/stb_image.cpp" "/Users/jiayang/Desktop/CG_Project/build/CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 
@@ -19,7 +19,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/jiayang/Desktop/Assignment_3/build/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

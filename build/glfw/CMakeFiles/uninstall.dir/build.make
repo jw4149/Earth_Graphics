@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.12.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jiayang/Desktop/Assignment_3
+CMAKE_SOURCE_DIR = /Users/jiayang/Desktop/CG_Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jiayang/Desktop/Assignment_3/build
+CMAKE_BINARY_DIR = /Users/jiayang/Desktop/CG_Project/build
 
 # Utility rule file for uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /Users/jiayang/Desktop/Assignment_3/build
 include glfw/CMakeFiles/uninstall.dir/progress.make
 
 glfw/CMakeFiles/uninstall:
-	cd /Users/jiayang/Desktop/Assignment_3/build/glfw && /usr/local/Cellar/cmake/3.12.2/bin/cmake -P /Users/jiayang/Desktop/Assignment_3/build/glfw/cmake_uninstall.cmake
+	cd /Users/jiayang/Desktop/CG_Project/build/glfw && /usr/local/Cellar/cmake/3.12.2/bin/cmake -P /Users/jiayang/Desktop/CG_Project/build/glfw/cmake_uninstall.cmake
 
 uninstall: glfw/CMakeFiles/uninstall
 uninstall: glfw/CMakeFiles/uninstall.dir/build.make
@@ -67,10 +67,10 @@ glfw/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : glfw/CMakeFiles/uninstall.dir/build
 
 glfw/CMakeFiles/uninstall.dir/clean:
-	cd /Users/jiayang/Desktop/Assignment_3/build/glfw && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /Users/jiayang/Desktop/CG_Project/build/glfw && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : glfw/CMakeFiles/uninstall.dir/clean
 
 glfw/CMakeFiles/uninstall.dir/depend:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jiayang/Desktop/Assignment_3 /Users/jiayang/Desktop/Assignment_3/ext/glfw /Users/jiayang/Desktop/Assignment_3/build /Users/jiayang/Desktop/Assignment_3/build/glfw /Users/jiayang/Desktop/Assignment_3/build/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jiayang/Desktop/CG_Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jiayang/Desktop/CG_Project /Users/jiayang/Desktop/CG_Project/ext/glfw /Users/jiayang/Desktop/CG_Project/build /Users/jiayang/Desktop/CG_Project/build/glfw /Users/jiayang/Desktop/CG_Project/build/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : glfw/CMakeFiles/uninstall.dir/depend
 

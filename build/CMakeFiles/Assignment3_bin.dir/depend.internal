@@ -123,8 +123,8 @@ CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.o
  ../ext/eigen/Eigen/src/plugins/CommonCwiseUnaryOps.h
  ../ext/eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
  ../ext/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
- /Users/jiayang/Desktop/Assignment_3/src/Helpers.cpp
- /Users/jiayang/Desktop/Assignment_3/src/Helpers.h
+ /Users/jiayang/Desktop/CG_Project/src/Helpers.cpp
+ /Users/jiayang/Desktop/CG_Project/src/Helpers.h
 CMakeFiles/Assignment3_bin.dir/src/main.cpp.o
  ../ext/eigen/Eigen/Cholesky
  ../ext/eigen/Eigen/Core
@@ -329,9 +329,9 @@ CMakeFiles/Assignment3_bin.dir/src/main.cpp.o
  ../ext/eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
  ../ext/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
  ../ext/glfw/include/GLFW/glfw3.h
- /Users/jiayang/Desktop/Assignment_3/src/Helpers.h
- /Users/jiayang/Desktop/Assignment_3/src/main.cpp
- /Users/jiayang/Desktop/Assignment_3/src/stb_image.h
+ /Users/jiayang/Desktop/CG_Project/src/Helpers.h
+ /Users/jiayang/Desktop/CG_Project/src/main.cpp
+ /Users/jiayang/Desktop/CG_Project/src/stb_image.h
 CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.o
- /Users/jiayang/Desktop/Assignment_3/src/stb_image.cpp
- /Users/jiayang/Desktop/Assignment_3/src/stb_image.h
+ /Users/jiayang/Desktop/CG_Project/src/stb_image.cpp
+ /Users/jiayang/Desktop/CG_Project/src/stb_image.h

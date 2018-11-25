@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.12.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jiayang/Desktop/Assignment_3
+CMAKE_SOURCE_DIR = /Users/jiayang/Desktop/CG_Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jiayang/Desktop/Assignment_3/build
+CMAKE_BINARY_DIR = /Users/jiayang/Desktop/CG_Project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/jiayang/Desktop/Assignment_3/build/CMakeFiles /Users/jiayang/Desktop/Assignment_3/build/glfw/src/CMakeFiles/progress.marks
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f CMakeFiles/Makefile2 glfw/src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jiayang/Desktop/Assignment_3/build/CMakeFiles 0
+	cd /Users/jiayang/Desktop/CG_Project/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/jiayang/Desktop/CG_Project/build/CMakeFiles /Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/progress.marks
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f CMakeFiles/Makefile2 glfw/src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jiayang/Desktop/CG_Project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f CMakeFiles/Makefile2 glfw/src/clean
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f CMakeFiles/Makefile2 glfw/src/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f CMakeFiles/Makefile2 glfw/src/preinstall
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f CMakeFiles/Makefile2 glfw/src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f CMakeFiles/Makefile2 glfw/src/preinstall
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f CMakeFiles/Makefile2 glfw/src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/jiayang/Desktop/CG_Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 glfw/src/CMakeFiles/glfw.dir/rule:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f CMakeFiles/Makefile2 glfw/src/CMakeFiles/glfw.dir/rule
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f CMakeFiles/Makefile2 glfw/src/CMakeFiles/glfw.dir/rule
 .PHONY : glfw/src/CMakeFiles/glfw.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ glfw: glfw/src/CMakeFiles/glfw.dir/rule
 
 # fast build rule for target.
 glfw/fast:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/build
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/build
 .PHONY : glfw/fast
 
 cocoa_init.o: cocoa_init.m.o
@@ -177,7 +177,7 @@ cocoa_init.o: cocoa_init.m.o
 
 # target to build an object file
 cocoa_init.m.o:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o
 .PHONY : cocoa_init.m.o
 
 cocoa_init.i: cocoa_init.m.i
@@ -186,7 +186,7 @@ cocoa_init.i: cocoa_init.m.i
 
 # target to preprocess a source file
 cocoa_init.m.i:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.i
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.i
 .PHONY : cocoa_init.m.i
 
 cocoa_init.s: cocoa_init.m.s
@@ -195,7 +195,7 @@ cocoa_init.s: cocoa_init.m.s
 
 # target to generate assembly for a file
 cocoa_init.m.s:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.s
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.s
 .PHONY : cocoa_init.m.s
 
 cocoa_monitor.o: cocoa_monitor.m.o
@@ -204,7 +204,7 @@ cocoa_monitor.o: cocoa_monitor.m.o
 
 # target to build an object file
 cocoa_monitor.m.o:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o
 .PHONY : cocoa_monitor.m.o
 
 cocoa_monitor.i: cocoa_monitor.m.i
@@ -213,7 +213,7 @@ cocoa_monitor.i: cocoa_monitor.m.i
 
 # target to preprocess a source file
 cocoa_monitor.m.i:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.i
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.i
 .PHONY : cocoa_monitor.m.i
 
 cocoa_monitor.s: cocoa_monitor.m.s
@@ -222,7 +222,7 @@ cocoa_monitor.s: cocoa_monitor.m.s
 
 # target to generate assembly for a file
 cocoa_monitor.m.s:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.s
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.s
 .PHONY : cocoa_monitor.m.s
 
 cocoa_window.o: cocoa_window.m.o
@@ -231,7 +231,7 @@ cocoa_window.o: cocoa_window.m.o
 
 # target to build an object file
 cocoa_window.m.o:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o
 .PHONY : cocoa_window.m.o
 
 cocoa_window.i: cocoa_window.m.i
@@ -240,7 +240,7 @@ cocoa_window.i: cocoa_window.m.i
 
 # target to preprocess a source file
 cocoa_window.m.i:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.i
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.i
 .PHONY : cocoa_window.m.i
 
 cocoa_window.s: cocoa_window.m.s
@@ -249,7 +249,7 @@ cocoa_window.s: cocoa_window.m.s
 
 # target to generate assembly for a file
 cocoa_window.m.s:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.s
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.s
 .PHONY : cocoa_window.m.s
 
 context.o: context.c.o
@@ -258,7 +258,7 @@ context.o: context.c.o
 
 # target to build an object file
 context.c.o:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/context.c.o
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/context.c.o
 .PHONY : context.c.o
 
 context.i: context.c.i
@@ -267,7 +267,7 @@ context.i: context.c.i
 
 # target to preprocess a source file
 context.c.i:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/context.c.i
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/context.c.i
 .PHONY : context.c.i
 
 context.s: context.c.s
@@ -276,7 +276,7 @@ context.s: context.c.s
 
 # target to generate assembly for a file
 context.c.s:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/context.c.s
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/context.c.s
 .PHONY : context.c.s
 
 init.o: init.c.o
@@ -285,7 +285,7 @@ init.o: init.c.o
 
 # target to build an object file
 init.c.o:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/init.c.o
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/init.c.o
 .PHONY : init.c.o
 
 init.i: init.c.i
@@ -294,7 +294,7 @@ init.i: init.c.i
 
 # target to preprocess a source file
 init.c.i:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/init.c.i
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/init.c.i
 .PHONY : init.c.i
 
 init.s: init.c.s
@@ -303,7 +303,7 @@ init.s: init.c.s
 
 # target to generate assembly for a file
 init.c.s:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/init.c.s
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/init.c.s
 .PHONY : init.c.s
 
 input.o: input.c.o
@@ -312,7 +312,7 @@ input.o: input.c.o
 
 # target to build an object file
 input.c.o:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/input.c.o
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/input.c.o
 .PHONY : input.c.o
 
 input.i: input.c.i
@@ -321,7 +321,7 @@ input.i: input.c.i
 
 # target to preprocess a source file
 input.c.i:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/input.c.i
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/input.c.i
 .PHONY : input.c.i
 
 input.s: input.c.s
@@ -330,7 +330,7 @@ input.s: input.c.s
 
 # target to generate assembly for a file
 input.c.s:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/input.c.s
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/input.c.s
 .PHONY : input.c.s
 
 iokit_joystick.o: iokit_joystick.m.o
@@ -339,7 +339,7 @@ iokit_joystick.o: iokit_joystick.m.o
 
 # target to build an object file
 iokit_joystick.m.o:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.o
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.o
 .PHONY : iokit_joystick.m.o
 
 iokit_joystick.i: iokit_joystick.m.i
@@ -348,7 +348,7 @@ iokit_joystick.i: iokit_joystick.m.i
 
 # target to preprocess a source file
 iokit_joystick.m.i:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.i
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.i
 .PHONY : iokit_joystick.m.i
 
 iokit_joystick.s: iokit_joystick.m.s
@@ -357,7 +357,7 @@ iokit_joystick.s: iokit_joystick.m.s
 
 # target to generate assembly for a file
 iokit_joystick.m.s:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.s
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.s
 .PHONY : iokit_joystick.m.s
 
 mach_time.o: mach_time.c.o
@@ -366,7 +366,7 @@ mach_time.o: mach_time.c.o
 
 # target to build an object file
 mach_time.c.o:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/mach_time.c.o
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/mach_time.c.o
 .PHONY : mach_time.c.o
 
 mach_time.i: mach_time.c.i
@@ -375,7 +375,7 @@ mach_time.i: mach_time.c.i
 
 # target to preprocess a source file
 mach_time.c.i:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/mach_time.c.i
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/mach_time.c.i
 .PHONY : mach_time.c.i
 
 mach_time.s: mach_time.c.s
@@ -384,7 +384,7 @@ mach_time.s: mach_time.c.s
 
 # target to generate assembly for a file
 mach_time.c.s:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/mach_time.c.s
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/mach_time.c.s
 .PHONY : mach_time.c.s
 
 monitor.o: monitor.c.o
@@ -393,7 +393,7 @@ monitor.o: monitor.c.o
 
 # target to build an object file
 monitor.c.o:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/monitor.c.o
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/monitor.c.o
 .PHONY : monitor.c.o
 
 monitor.i: monitor.c.i
@@ -402,7 +402,7 @@ monitor.i: monitor.c.i
 
 # target to preprocess a source file
 monitor.c.i:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/monitor.c.i
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/monitor.c.i
 .PHONY : monitor.c.i
 
 monitor.s: monitor.c.s
@@ -411,7 +411,7 @@ monitor.s: monitor.c.s
 
 # target to generate assembly for a file
 monitor.c.s:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/monitor.c.s
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/monitor.c.s
 .PHONY : monitor.c.s
 
 nsgl_context.o: nsgl_context.m.o
@@ -420,7 +420,7 @@ nsgl_context.o: nsgl_context.m.o
 
 # target to build an object file
 nsgl_context.m.o:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o
 .PHONY : nsgl_context.m.o
 
 nsgl_context.i: nsgl_context.m.i
@@ -429,7 +429,7 @@ nsgl_context.i: nsgl_context.m.i
 
 # target to preprocess a source file
 nsgl_context.m.i:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.i
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.i
 .PHONY : nsgl_context.m.i
 
 nsgl_context.s: nsgl_context.m.s
@@ -438,7 +438,7 @@ nsgl_context.s: nsgl_context.m.s
 
 # target to generate assembly for a file
 nsgl_context.m.s:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.s
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.s
 .PHONY : nsgl_context.m.s
 
 posix_tls.o: posix_tls.c.o
@@ -447,7 +447,7 @@ posix_tls.o: posix_tls.c.o
 
 # target to build an object file
 posix_tls.c.o:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o
 .PHONY : posix_tls.c.o
 
 posix_tls.i: posix_tls.c.i
@@ -456,7 +456,7 @@ posix_tls.i: posix_tls.c.i
 
 # target to preprocess a source file
 posix_tls.c.i:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/posix_tls.c.i
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/posix_tls.c.i
 .PHONY : posix_tls.c.i
 
 posix_tls.s: posix_tls.c.s
@@ -465,7 +465,7 @@ posix_tls.s: posix_tls.c.s
 
 # target to generate assembly for a file
 posix_tls.c.s:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/posix_tls.c.s
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/posix_tls.c.s
 .PHONY : posix_tls.c.s
 
 window.o: window.c.o
@@ -474,7 +474,7 @@ window.o: window.c.o
 
 # target to build an object file
 window.c.o:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/window.c.o
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/window.c.o
 .PHONY : window.c.o
 
 window.i: window.c.i
@@ -483,7 +483,7 @@ window.i: window.c.i
 
 # target to preprocess a source file
 window.c.i:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/window.c.i
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/window.c.i
 .PHONY : window.c.i
 
 window.s: window.c.s
@@ -492,7 +492,7 @@ window.s: window.c.s
 
 # target to generate assembly for a file
 window.c.s:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/window.c.s
+	cd /Users/jiayang/Desktop/CG_Project/build && $(MAKE) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/window.c.s
 .PHONY : window.c.s
 
 # Help Target
@@ -555,6 +555,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/jiayang/Desktop/CG_Project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

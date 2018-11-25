@@ -43,10 +43,10 @@ RM = /usr/local/Cellar/cmake/3.12.2/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jiayang/Desktop/Assignment_3
+CMAKE_SOURCE_DIR = /Users/jiayang/Desktop/CG_Project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jiayang/Desktop/Assignment_3/build
+CMAKE_BINARY_DIR = /Users/jiayang/Desktop/CG_Project/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Assignment3_bin.dir/depend.make
@@ -59,42 +59,42 @@ include CMakeFiles/Assignment3_bin.dir/flags.make
 
 CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.o: CMakeFiles/Assignment3_bin.dir/flags.make
 CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.o: ../src/Helpers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jiayang/Desktop/Assignment_3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.o -c /Users/jiayang/Desktop/Assignment_3/src/Helpers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jiayang/Desktop/CG_Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.o -c /Users/jiayang/Desktop/CG_Project/src/Helpers.cpp
 
 CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jiayang/Desktop/Assignment_3/src/Helpers.cpp > CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jiayang/Desktop/CG_Project/src/Helpers.cpp > CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.i
 
 CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jiayang/Desktop/Assignment_3/src/Helpers.cpp -o CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jiayang/Desktop/CG_Project/src/Helpers.cpp -o CMakeFiles/Assignment3_bin.dir/src/Helpers.cpp.s
 
 CMakeFiles/Assignment3_bin.dir/src/main.cpp.o: CMakeFiles/Assignment3_bin.dir/flags.make
 CMakeFiles/Assignment3_bin.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jiayang/Desktop/Assignment_3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Assignment3_bin.dir/src/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment3_bin.dir/src/main.cpp.o -c /Users/jiayang/Desktop/Assignment_3/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jiayang/Desktop/CG_Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Assignment3_bin.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment3_bin.dir/src/main.cpp.o -c /Users/jiayang/Desktop/CG_Project/src/main.cpp
 
 CMakeFiles/Assignment3_bin.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Assignment3_bin.dir/src/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jiayang/Desktop/Assignment_3/src/main.cpp > CMakeFiles/Assignment3_bin.dir/src/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jiayang/Desktop/CG_Project/src/main.cpp > CMakeFiles/Assignment3_bin.dir/src/main.cpp.i
 
 CMakeFiles/Assignment3_bin.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assignment3_bin.dir/src/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jiayang/Desktop/Assignment_3/src/main.cpp -o CMakeFiles/Assignment3_bin.dir/src/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jiayang/Desktop/CG_Project/src/main.cpp -o CMakeFiles/Assignment3_bin.dir/src/main.cpp.s
 
 CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.o: CMakeFiles/Assignment3_bin.dir/flags.make
 CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.o: ../src/stb_image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jiayang/Desktop/Assignment_3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.o -c /Users/jiayang/Desktop/Assignment_3/src/stb_image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jiayang/Desktop/CG_Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.o -c /Users/jiayang/Desktop/CG_Project/src/stb_image.cpp
 
 CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jiayang/Desktop/Assignment_3/src/stb_image.cpp > CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jiayang/Desktop/CG_Project/src/stb_image.cpp > CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.i
 
 CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jiayang/Desktop/Assignment_3/src/stb_image.cpp -o CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jiayang/Desktop/CG_Project/src/stb_image.cpp -o CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.s
 
 # Object files for target Assignment3_bin
 Assignment3_bin_OBJECTS = \
@@ -111,7 +111,7 @@ Assignment3_bin: CMakeFiles/Assignment3_bin.dir/src/stb_image.cpp.o
 Assignment3_bin: CMakeFiles/Assignment3_bin.dir/build.make
 Assignment3_bin: libglfw3.a
 Assignment3_bin: CMakeFiles/Assignment3_bin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jiayang/Desktop/Assignment_3/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Assignment3_bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jiayang/Desktop/CG_Project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Assignment3_bin"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Assignment3_bin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +124,6 @@ CMakeFiles/Assignment3_bin.dir/clean:
 .PHONY : CMakeFiles/Assignment3_bin.dir/clean
 
 CMakeFiles/Assignment3_bin.dir/depend:
-	cd /Users/jiayang/Desktop/Assignment_3/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jiayang/Desktop/Assignment_3 /Users/jiayang/Desktop/Assignment_3 /Users/jiayang/Desktop/Assignment_3/build /Users/jiayang/Desktop/Assignment_3/build /Users/jiayang/Desktop/Assignment_3/build/CMakeFiles/Assignment3_bin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/jiayang/Desktop/CG_Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/jiayang/Desktop/CG_Project /Users/jiayang/Desktop/CG_Project /Users/jiayang/Desktop/CG_Project/build /Users/jiayang/Desktop/CG_Project/build /Users/jiayang/Desktop/CG_Project/build/CMakeFiles/Assignment3_bin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Assignment3_bin.dir/depend
 

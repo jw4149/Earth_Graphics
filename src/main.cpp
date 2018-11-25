@@ -46,6 +46,7 @@ float theta;
 float phi;
 
 Vector3f light;
+float angle;
 
 int earthMode;
 
@@ -390,7 +391,9 @@ int main(void)
     0,0,0,1;
 
     light <<
-    3,0,3;
+    5,0,0;
+
+    angle = 0.0;
 
     // Save the current time --- it will be used to dynamically change the triangle color
     auto t_start = std::chrono::high_resolution_clock::now();
@@ -444,6 +447,8 @@ int main(void)
         0,1,0,0,
         sin(-0.1*time),0,cos(-0.1*time),0,
         0,0,0,1;
+
+        light << 5.0 * cos(0.2*time), 0, 5.0 * sin(0.2*time);
 
         //transformation = rotate * transformation;
         //glUniform3f(program.uniform("triangleColor"), (float)(sin(time * 4.0f) + 1.0f) / 2.0f, 0.0f, 0.0f);
