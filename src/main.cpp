@@ -48,8 +48,6 @@ float phi;
 Vector3f light;
 float angle;
 
-int earthMode;
-
 void lookAt(Vector3f& e, Vector3f& g, Vector3f& t, MatrixXf& view) {
     Vector3f w = -g.normalized();
     Vector3f u = (t.cross(w)).normalized();
@@ -147,18 +145,6 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
             Vector3f origin(0,0,0);
             center = origin - eye;
             lookAt(eye, center, up, view);
-        }
-        break;
-
-        case GLFW_KEY_1:
-        if (action == GLFW_PRESS) {
-            earthMode = 1;
-        }
-        break;
-
-        case GLFW_KEY_2:
-        if (action == GLFW_PRESS) {
-            earthMode = 2;
         }
         break;
     }
@@ -352,7 +338,7 @@ int main(void)
                     "void main()"
                     "{"
                     "    vec3 I = normalize(-f_position + f_light);"
-                    "    outColor = texture(ourTexture, f_texCoord) * dot(I, f_normal);"
+                    "    outColor = texture(ourTexture, f_texCoord) * clamp(dot(I, f_normal), 0.1, 1.0);"
                     "}";
 
     // Compile the two shaders and upload the binary to the GPU
@@ -369,9 +355,7 @@ int main(void)
     program.bindVertexAttribArray("normal",VBO_N);
     program.bindVertexAttribArray("texCoord",VBO_T);
 
-    earthMode = 2;
-
-    eye << 0,0,4;
+    eye << 0,0,2.8;
     center << 0,0,-1;
     up << 0,1,0;
     lookAt(eye, center, up, view);
@@ -391,7 +375,7 @@ int main(void)
     0,0,0,1;
 
     light <<
-    5,0,0;
+    6,0,0;
 
     angle = 0.0;
 
@@ -448,7 +432,7 @@ int main(void)
         sin(-0.1*time),0,cos(-0.1*time),0,
         0,0,0,1;
 
-        light << 5.0 * cos(0.2*time), 0, 5.0 * sin(0.2*time);
+        light << 5.0 * cos(0.3*time), 0, 5.0 * sin(0.3*time);
 
         //transformation = rotate * transformation;
         //glUniform3f(program.uniform("triangleColor"), (float)(sin(time * 4.0f) + 1.0f) / 2.0f, 0.0f, 0.0f);
