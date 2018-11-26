@@ -274,9 +274,9 @@ int main(void)
 
     EBO.update(E);
 
-    unsigned int texture;
-    glGenTextures(1, &texture);
-    glBindTexture(GL_TEXTURE_2D, texture);
+    unsigned int texture1;
+    glGenTextures(1, &texture1);
+    glBindTexture(GL_TEXTURE_2D, texture1);
     
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);   
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
@@ -296,6 +296,28 @@ int main(void)
     //stbi_image_free(data1);
     stbi_image_free(data);
 
+    unsigned int texture2;
+    glGenTextures(1, &texture2);
+    glBindTexture(GL_TEXTURE_2D, texture2);
+    
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);   
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    
+    /*
+    int width1, height1, nrChannels1;
+    unsigned char *data1 = stbi_load("earth1.jpg", &width1, &height1, &nrChannels1, 0);
+    */
+    //int width, height, nrChannels;
+    data = stbi_load("earth_night.jpg", &width, &height, &nrChannels, 0);
+
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+    glGenerateMipmap(GL_TEXTURE_2D);
+    
+    //stbi_image_free(data1);
+    stbi_image_free(data);
+
     // Initialize the OpenGL Program
     // A program controls the OpenGL pipeline and it must contains
     // at least a vertex shader and a fragment shader to be valid
@@ -307,6 +329,7 @@ int main(void)
                     "in vec3 color;"
                     "in vec2 texCoord;"
                     "uniform vec3 light;"
+                    "uniform vec3 camera;"
                     "uniform mat4 view;"
                     "uniform mat4 projection;"
                     "uniform mat4 transformation;"
@@ -315,6 +338,7 @@ int main(void)
                     "out vec3 f_position;"
                     "out vec2 f_texCoord;"
                     "out vec3 f_light;"
+                    "out vec3 f_camera;"
                     "void main()"
                     "{"
                     "    vec4 transformed_position = transformation * vec4(position, 1.0);"
@@ -325,6 +349,7 @@ int main(void)
                     "    f_normal = normalize((transpose(inverse(view)) * transformed_normal).xyz);"
                     "    f_texCoord = texCoord;"
                     "    f_light = (view * vec4(light, 1.0)).xyz;"
+                    "    f_camera = (view * vec4(camera, 1.0)).xyz;"
                     "}";
     const GLchar* fragment_shader =
             "#version 150 core\n"
@@ -333,12 +358,16 @@ int main(void)
                     "in vec3 f_position;"
                     "in vec2 f_texCoord;"
                     "in vec3 f_light;"
+                    "in vec3 f_camera;"
                     "out vec4 outColor;"
-                    "uniform sampler2D ourTexture;"
+                    "uniform sampler2D texture1;"
+                    "uniform sampler2D texture2;"
                     "void main()"
                     "{"
                     "    vec3 I = normalize(-f_position + f_light);"
-                    "    outColor = texture(ourTexture, f_texCoord) * clamp(dot(I, f_normal), 0.1, 1.0);"
+                    "    vec3 v = normalize(-f_position + f_camera);"
+                    "    vec3 h = (I+v)/2;"
+                    "    outColor = mix(texture(texture2, f_texCoord), texture(texture1, f_texCoord), 1.5*clamp(dot(I, f_normal), 0.15, 1.0));"
                     "}";
 
     // Compile the two shaders and upload the binary to the GPU
@@ -375,9 +404,9 @@ int main(void)
     0,0,0,1;
 
     light <<
-    6,0,0;
+    100,0,0;
 
-    angle = 0.0;
+    angle = -1.5;
 
     // Save the current time --- it will be used to dynamically change the triangle color
     auto t_start = std::chrono::high_resolution_clock::now();
@@ -387,6 +416,9 @@ int main(void)
 
     // Register the mouse callback
     //glfwSetMouseButtonCallback(window, mouse_button_callback);
+
+    glUniform1i(program.uniform("texture1"), 0);
+    glUniform1i(program.uniform("texture2"), 1);
 
     // Loop until the user closes the window
     while (!glfwWindowShouldClose(window))
@@ -419,8 +451,7 @@ int main(void)
         glUniformMatrix4fv(program.uniform("projection"), 1, GL_FALSE, projection.data());
         glUniformMatrix4fv(program.uniform("transformation"), 1, GL_FALSE, transformation.data());
         glUniform3fv(program.uniform("light"), 1, light.data());
-
-        glUniform1i(program.uniform("ourTexture"), 0);
+        glUniform3fv(program.uniform("camera"), 1, eye.data());
 
         // Set the uniform value depending on the time difference
         auto t_now = std::chrono::high_resolution_clock::now();
@@ -432,7 +463,7 @@ int main(void)
         sin(-0.1*time),0,cos(-0.1*time),0,
         0,0,0,1;
 
-        light << 5.0 * cos(0.3*time), 0, 5.0 * sin(0.3*time);
+        light << 5.0 * cos(angle + 0.3*time), 0, 5.0 * sin(angle + 0.3*time);
 
         //transformation = rotate * transformation;
         //glUniform3f(program.uniform("triangleColor"), (float)(sin(time * 4.0f) + 1.0f) / 2.0f, 0.0f, 0.0f);
@@ -442,7 +473,10 @@ int main(void)
         glEnable(GL_DEPTH_TEST);
 
         //VAO.bind();
-        glBindTexture(GL_TEXTURE_2D, texture);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, texture1);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, texture2);
         // Draw a triangle
         glDrawElements(GL_TRIANGLES, ( slices * stacks + slices ) * 6, GL_UNSIGNED_INT, 0);
 
