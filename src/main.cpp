@@ -1,31 +1,24 @@
-// This example is heavily based on the tutorial at https://open.gl
-
-// OpenGL Helpers to reduce the clutter
 #include "Helpers.h"
 
 #include "stb_image.h"
 
-// GLFW is necessary to handle the OpenGL context
 #include <GLFW/glfw3.h>
 
-// Linear Algebra Library
 #include <Eigen/Core>
 #include <Eigen/Dense>
 #include <iostream>
 
-// Timer
+
 #include <chrono>
 
 using namespace Eigen;
 
-// VertexBufferObject wrapper
 VertexBufferObject VBO;
 VertexBufferObject VBO_C;
 VertexBufferObject VBO_N;
 VertexBufferObject VBO_T;
 ElementBufferObject EBO;
 
-// Contains the vertex positions
 Eigen::MatrixXf V(3,3);
 Eigen::MatrixXf C(3,3);
 Eigen::MatrixXf N(3,3);
@@ -154,24 +147,19 @@ int main(void)
 {
     GLFWwindow* window;
 
-    // Initialize the library
     if (!glfwInit())
         return -1;
 
-    // Activate supersampling
     glfwWindowHint(GLFW_SAMPLES, 8);
 
-    // Ensure that we get at least a 3.2 context
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 2);
 
-    // On apple we have to load a core profile with forward compatibility
 #ifdef __APPLE__
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
 
-    // Create a windowed mode window and its OpenGL context
     window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
     if (!window)
     {
@@ -179,7 +167,6 @@ int main(void)
         return -1;
     }
 
-    // Make the window's context current
     glfwMakeContextCurrent(window);
 
     #ifndef __APPLE__
@@ -187,10 +174,9 @@ int main(void)
       GLenum err = glewInit();
       if(GLEW_OK != err)
       {
-        /* Problem: glewInit failed, something is seriously wrong. */
        fprintf(stderr, "Error: %s\n", glewGetErrorString(err));
       }
-      glGetError(); // pull and savely ignonre unhandled errors like GL_INVALID_ENUM
+      glGetError(); 
       fprintf(stdout, "Status: Using GLEW %s\n", glewGetString(GLEW_VERSION));
     #endif
 
@@ -202,17 +188,10 @@ int main(void)
     printf("Supported OpenGL is %s\n", (const char*)glGetString(GL_VERSION));
     printf("Supported GLSL is %s\n", (const char*)glGetString(GL_SHADING_LANGUAGE_VERSION));
 
-    // Initialize the VAO
-    // A Vertex Array Object (or VAO) is an object that describes how the vertex
-    // attributes are stored in a Vertex Buffer Object (or VBO). This means that
-    // the VAO is not the actual object storing the vertex data,
-    // but the descriptor of the vertex data.
     VertexArrayObject VAO;
     VAO.init();
     VAO.bind();
 
-    // Initialize the VBO with the vertices data
-    // A VBO is a data container that lives in the GPU memory
     VBO.init();
     VBO_C.init();
     VBO_N.init();
@@ -231,6 +210,8 @@ int main(void)
     E << 0, 1, 2, 2, 3, 0;
     EBO.update(E);
 */
+
+    // sphere constructs
     int slices = 64;
     int stacks = 64;
     float pi = 3.1415926535897932384626433832795f;
@@ -274,6 +255,8 @@ int main(void)
 
     EBO.update(E);
 
+    //loading textures
+
     unsigned int texture1;
     glGenTextures(1, &texture1);
     glBindTexture(GL_TEXTURE_2D, texture1);
@@ -288,7 +271,7 @@ int main(void)
     unsigned char *data1 = stbi_load("earth1.jpg", &width1, &height1, &nrChannels1, 0);
     */
     int width, height, nrChannels;
-    unsigned char *data = stbi_load("earth.jpg", &width, &height, &nrChannels, 0);
+    unsigned char *data = stbi_load("../pics/earth.jpg", &width, &height, &nrChannels, 0);
 
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
     glGenerateMipmap(GL_TEXTURE_2D);
@@ -310,7 +293,7 @@ int main(void)
     unsigned char *data1 = stbi_load("earth1.jpg", &width1, &height1, &nrChannels1, 0);
     */
     //int width, height, nrChannels;
-    data = stbi_load("earth_night.jpg", &width, &height, &nrChannels, 0);
+    data = stbi_load("../pics/earth_night.jpg", &width, &height, &nrChannels, 0);
 
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
     glGenerateMipmap(GL_TEXTURE_2D);
@@ -318,9 +301,7 @@ int main(void)
     //stbi_image_free(data1);
     stbi_image_free(data);
 
-    // Initialize the OpenGL Program
-    // A program controls the OpenGL pipeline and it must contains
-    // at least a vertex shader and a fragment shader to be valid
+    //pipeline
     Program program;
     const GLchar* vertex_shader =
             "#version 150 core\n"
@@ -370,15 +351,9 @@ int main(void)
                     "    outColor = mix(texture(texture2, f_texCoord), texture(texture1, f_texCoord), 1.5*clamp(dot(I, f_normal), 0.15, 1.0));"
                     "}";
 
-    // Compile the two shaders and upload the binary to the GPU
-    // Note that we have to explicitly specify that the output "slot" called outColor
-    // is the one that we want in the fragment buffer (and thus on screen)
     program.init(vertex_shader,fragment_shader,"outColor");
     program.bind();
 
-    // The vertex shader wants the position of the vertices as an input.
-    // The following line connects the VBO we defined above with the position "slot"
-    // in the vertex shader
     program.bindVertexAttribArray("position",VBO);
     program.bindVertexAttribArray("color",VBO_C);
     program.bindVertexAttribArray("normal",VBO_N);
@@ -408,19 +383,15 @@ int main(void)
 
     angle = -1.5;
 
-    // Save the current time --- it will be used to dynamically change the triangle color
+    // current time
     auto t_start = std::chrono::high_resolution_clock::now();
 
-    // Register the keyboard callback
     glfwSetKeyCallback(window, key_callback);
-
-    // Register the mouse callback
-    //glfwSetMouseButtonCallback(window, mouse_button_callback);
 
     glUniform1i(program.uniform("texture1"), 0);
     glUniform1i(program.uniform("texture2"), 1);
 
-    // Loop until the user closes the window
+    // Loop until window closed
     while (!glfwWindowShouldClose(window))
     {
         /*
@@ -453,7 +424,7 @@ int main(void)
         glUniform3fv(program.uniform("light"), 1, light.data());
         glUniform3fv(program.uniform("camera"), 1, eye.data());
 
-        // Set the uniform value depending on the time difference
+        // ratation animation
         auto t_now = std::chrono::high_resolution_clock::now();
         float time = std::chrono::duration_cast<std::chrono::duration<float>>(t_now - t_start).count();
         //Matrix4f rotate;
@@ -465,35 +436,26 @@ int main(void)
 
         light << 5.0 * cos(angle + 0.3*time), 0, 5.0 * sin(angle + 0.3*time);
 
-        //transformation = rotate * transformation;
-        //glUniform3f(program.uniform("triangleColor"), (float)(sin(time * 4.0f) + 1.0f) / 2.0f, 0.0f, 0.0f);
-        // Clear the framebuffer
-        //glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glEnable(GL_DEPTH_TEST);
 
-        //VAO.bind();
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, texture1);
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture2);
-        // Draw a triangle
+        
         glDrawElements(GL_TRIANGLES, ( slices * stacks + slices ) * 6, GL_UNSIGNED_INT, 0);
 
-        // Swap front and back buffers
         glfwSwapBuffers(window);
 
-        // Poll for and process events
         glfwPollEvents();
     }
 
-    // Deallocate opengl memory
     program.free();
     VAO.free();
     VBO.free();
     EBO.free();
 
-    // Deallocate glfw internals
     glfwTerminate();
     return 0;
 }

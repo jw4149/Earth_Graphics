@@ -4,18 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/jiayang/Desktop/CG_Project/ext/glfw/src/cocoa_init.m" "/Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o"
-  "/Users/jiayang/Desktop/CG_Project/ext/glfw/src/cocoa_monitor.m" "/Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o"
-  "/Users/jiayang/Desktop/CG_Project/ext/glfw/src/cocoa_window.m" "/Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o"
-  "/Users/jiayang/Desktop/CG_Project/ext/glfw/src/context.c" "/Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/glfw.dir/context.c.o"
-  "/Users/jiayang/Desktop/CG_Project/ext/glfw/src/init.c" "/Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/glfw.dir/init.c.o"
-  "/Users/jiayang/Desktop/CG_Project/ext/glfw/src/input.c" "/Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/glfw.dir/input.c.o"
-  "/Users/jiayang/Desktop/CG_Project/ext/glfw/src/iokit_joystick.m" "/Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.o"
-  "/Users/jiayang/Desktop/CG_Project/ext/glfw/src/mach_time.c" "/Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/glfw.dir/mach_time.c.o"
-  "/Users/jiayang/Desktop/CG_Project/ext/glfw/src/monitor.c" "/Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
-  "/Users/jiayang/Desktop/CG_Project/ext/glfw/src/nsgl_context.m" "/Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o"
-  "/Users/jiayang/Desktop/CG_Project/ext/glfw/src/posix_tls.c" "/Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o"
-  "/Users/jiayang/Desktop/CG_Project/ext/glfw/src/window.c" "/Users/jiayang/Desktop/CG_Project/build/glfw/src/CMakeFiles/glfw.dir/window.c.o"
+  "/Users/jiayangwang/Desktop/Earth_Graphics/ext/glfw/src/cocoa_init.m" "/Users/jiayangwang/Desktop/Earth_Graphics/build/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o"
+  "/Users/jiayangwang/Desktop/Earth_Graphics/ext/glfw/src/cocoa_monitor.m" "/Users/jiayangwang/Desktop/Earth_Graphics/build/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o"
+  "/Users/jiayangwang/Desktop/Earth_Graphics/ext/glfw/src/cocoa_window.m" "/Users/jiayangwang/Desktop/Earth_Graphics/build/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o"
+  "/Users/jiayangwang/Desktop/Earth_Graphics/ext/glfw/src/context.c" "/Users/jiayangwang/Desktop/Earth_Graphics/build/glfw/src/CMakeFiles/glfw.dir/context.c.o"
+  "/Users/jiayangwang/Desktop/Earth_Graphics/ext/glfw/src/init.c" "/Users/jiayangwang/Desktop/Earth_Graphics/build/glfw/src/CMakeFiles/glfw.dir/init.c.o"
+  "/Users/jiayangwang/Desktop/Earth_Graphics/ext/glfw/src/input.c" "/Users/jiayangwang/Desktop/Earth_Graphics/build/glfw/src/CMakeFiles/glfw.dir/input.c.o"
+  "/Users/jiayangwang/Desktop/Earth_Graphics/ext/glfw/src/iokit_joystick.m" "/Users/jiayangwang/Desktop/Earth_Graphics/build/glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.o"
+  "/Users/jiayangwang/Desktop/Earth_Graphics/ext/glfw/src/mach_time.c" "/Users/jiayangwang/Desktop/Earth_Graphics/build/glfw/src/CMakeFiles/glfw.dir/mach_time.c.o"
+  "/Users/jiayangwang/Desktop/Earth_Graphics/ext/glfw/src/monitor.c" "/Users/jiayangwang/Desktop/Earth_Graphics/build/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
+  "/Users/jiayangwang/Desktop/Earth_Graphics/ext/glfw/src/nsgl_context.m" "/Users/jiayangwang/Desktop/Earth_Graphics/build/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o"
+  "/Users/jiayangwang/Desktop/Earth_Graphics/ext/glfw/src/posix_tls.c" "/Users/jiayangwang/Desktop/Earth_Graphics/build/glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o"
+  "/Users/jiayangwang/Desktop/Earth_Graphics/ext/glfw/src/window.c" "/Users/jiayangwang/Desktop/Earth_Graphics/build/glfw/src/CMakeFiles/glfw.dir/window.c.o"
   )
 set(CMAKE_C_COMPILER_ID "Clang")
 
